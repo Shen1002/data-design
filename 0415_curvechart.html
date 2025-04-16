@@ -12,6 +12,20 @@
         background-color: #f9f9f9;
         color: #333;
     }
+    .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+    }
+    p {
+            text-align: center;
+            background-color: #c8e6c9;
+            padding: 10px;
+            border-radius: 5px;
+    }
     h1 {
         font-size: 36px;
         text-align: center;
@@ -35,19 +49,31 @@
     }
     iframe {
         display: block;
-        margin: 20px auto;
-        border: none;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            height: 600px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+    }
+    footer {
+            text-align: center;
+            margin: 20px 0;
+            color: #7f8c8d;
+            font-size: 0.9rem;
     }
 </style>
 </head>
 
 <body>
-
+    <div class="container">
     <h1>Data Story:這是高雄市左營區A11至A33的人口樣態CURVECHART</h1>
-    <h2>由圖中可看出A22的身障者有3232位，占比總高齡人口的10.75%，如何協助他們成為我們的主要課題。</h2>
-    <!-- 嵌入提供的 iframe -->
+    <h2>高雄市左營區為人口密集且生活機能完善的區域，高齡人口比例逐年上升，已進入高齡社會。根據最新統計資料，左營區的65歲以上人口逐年增加，其中行動能力、健康狀況與社會參與的差異性也日益明顯，需更細緻的分級關注與照顧策略。<br>
+    在眾多高齡族群中，A22類別（指年滿65歲以上、身心障礙之高齡者）人數達3232位，占左營區總高齡人口的10.75%。這類族群多數面臨行動受限、社交圈縮小與醫療需求高等問題，是高齡照護政策中最需要關注的一環。<br>
+    由於A22類別長者多有身體障礙或慢性病，外出與參與社區活動意願低，容易陷入孤立與被動接受照護的狀態。因此，如何設計友善無障礙空間、提供適性化的社會參與機會，並搭配家庭與社區支持，是協助這一群體的關鍵課題。<br>
+    我們可以從社區動員與資源整合著手，設計包含「閱讀共學」、「步行復健」、「鄰里互助小隊」等活動，鼓勵相對行動便利的高齡者擔任陪伴角色，協助A22族群走出家門、建立互動網絡。同時與醫療單位、圖書館與社福機構合作，打造長者能參與、學習、康復、交友的生活場域，讓身障長者也能重新成為社區的一份子。</h2>
+    <p>高雄市左營區高齡人口樣態</p>
     <iframe src="https://plotdb.io/v/chart/37096" width="80%" height="600px" allowfullscreen="true" frameborder="0"></iframe>
+    </div>
+    <footer>© 2025 高雄市左營區高齡人口樣態分析</footer>
 </body>
 </html>
