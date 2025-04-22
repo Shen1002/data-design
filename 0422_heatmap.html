@@ -7,54 +7,106 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
+            margin: 0;
+            padding: 0;
             background-color: #f4f4f9;
         }
         .card {
-            max-width: 600px;
-            margin: 20px auto;
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 100vh;
             background: #fff;
-            border-radius: 8px;
+            border-radius: 0;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
             border: 1px solid #ddd;
+            overflow: hidden;
         }
-        .card-header {
-            padding: 20px;
+        .card-left {
+            width: 30%;
             background: #007bff;
             color: #fff;
-            text-align: center;
-        }
-        .card-header h1 {
-            margin: 0;
-            font-size: 1.5em;
-        }
-        .card-body {
             padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
-        .card-body p {
+        .card-left h1 {
             margin: 0 0 20px;
-            color: #555;
+            font-size: 1.8em;
+        }
+        .card-left p {
+            margin: 0;
+            font-size: 1em;
+        }
+        .card-right {
+            width: 70%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
         .chart-container {
-            text-align: center;
+            width: 100%;
+            height: 90%;
+            position: relative;
         }
         iframe {
             width: 100%;
-            height: 400px;
+            height: 100%;
             border: none;
+        }
+        .source {
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #999; /* 純文字灰色下標 */
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <div class="card">
-        <div class="card-header">
+        <!-- 左側說明 -->
+        <div class="card-left">
             <h1>高雄市村里級人口熱圖，區數值為平均人口，可透過點擊縣市中的鄉鎮再顯示村里人口數細節。</h1>
+            <p根據內政部統計處發布的113年12月高雄市行政區人口統計資料，高雄市總人口約為2,728,880人，其中男性約1,335,328人，女性約1,393,552人。<br>
+
+人口主要集中於西部都會區：<br>
+
+- **三民區**：人口最多，約330,764人。<br>
+
+- **左營區**：約197,591人。<br>
+
+- **楠梓區**：約194,334人。<br>
+
+- **鳳山區**：約356,000人（推估值）。<br>
+
+這些區域具備完善的交通、教育與醫療資源，吸引大量人口聚集。<br>
+
+相對而言，東部山區如桃源區與茂林區人口稀少，主要因地形限制與資源不足，導致人口外流與老化問題。<br>
+
+此外，高雄市65歲以上人口約占總人口的18.33%，較十年前增加約71.53%，預估113年底將達20%，正式進入「超高齡社會」。<br>
+
+**建議對策**：<br>
+
+1. **強化山區基礎建設**：提升交通、醫療與教育設施，吸引青年返鄉，減緩人口外流。<br>
+
+2. **推動都市更新**：針對老舊市區進行再開發，提升居住品質，吸引人口回流。<br>
+
+3. **多核心發展策略**：培育仁武、楠梓等新興區域，分散主城壓力，促進區域均衡發展。<br>
+
+4. **因應高齡化社會**：擴充長照服務、打造高齡友善環境，滿足日益增加的老年人口需求。<br> </p>
         </div>
-        <div class="card-body">
-            <p>高雄市目前人口主要集中在西部的都會區，如鳳山、三民與鼓山等地，導致交通壅塞、生活空間擁擠等問題。而東部山區如桃源、茂林等地則因資源不足，人口稀少且老化嚴重，青年人口多選擇外流。此外，一些老舊市區如苓雅、前鎮面臨人口外移的挑戰，發展逐漸停滯。針對此現象，應加強山區的基礎設施建設，提供遠距醫療與交通改善，吸引年輕人返鄉。同時，老市區可透過都市更新計畫活化社區，提高居住品質與就業機會。整體而言，高雄應推動多核心發展策略，如培育仁武與楠梓等新興區，分散主城人口壓力，並透過補助與創業資源導入，引導人口朝向均衡分布發展。</p>
+        <!-- 右側圖表 -->
+        <div class="card-right">
             <div class="chart-container">
+                <!-- 將圖表的網址嵌入到 iframe 的 src 屬性中 -->
                 <iframe src="https://plotdb.io/v/chart/37191" width="100%" height="600px" allowfullscreen="true" frameborder="0"></iframe>
+            </div>
+            <!-- 資料來源 -->
+           <div class="source">
+                資料來源：社會經濟資料服務平台-113年12月行政區人口統計_村里
             </div>
         </div>
     </div>
