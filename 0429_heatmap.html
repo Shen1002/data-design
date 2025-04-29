@@ -48,29 +48,44 @@
             .iframe-container {
                 flex: 1 1 100%; /* 小螢幕時 iframe 全寬顯示 */
             }
+        .source {
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #999; /* 純文字灰色下標 */
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <h1>本網頁為高雄市鄉鎮高齡人口熱圖，左側為65-79歲，右側為80歲以上，目的為透過視覺化方式分析高雄市高齡人口分布</h1>
+    <h1>本網頁為高雄市鄉鎮高齡人口熱圖，上圖為65-79歲，下圖為80歲以上<br>
+        ，目的為透過視覺化方式分析高雄市高齡人口分布</h1>
     <div class="container">
-        <!-- 左側 iframe -->
+        <!-- 上圖 iframe -->
         <div class="iframe-container">
             <iframe src="https://plotdb.io/v/chart/37313" width="100%" height="600px" allowfullscreen="true" frameborder="0"></iframe>
             <p class="description">圖一:高雄市65-79歲人口分布。</p>
         </div>
+          <!-- 資料來源 -->
+           <div class="source">
+                資料來源：社會經濟資料服務平台-113年12月行政區人口統計_村里
+            </div>
 
         <!-- 說明欄位 -->
         <div class="description">
-            <p>根據113年資料，高雄市65至79歲人口約佔總人口16%，80歲以上人口達8.1%，其中三民、鳳山、苓雅等區高齡者比例明顯偏高，尤以女性為主。此現象顯示高雄已步入深度高齡社會，建議強化社區長照資源、擴增日照中心，並結合在地文化與運動促進高齡健康生活。<br>
+            <p>根據113年資料，高雄市65至79歲人口約佔總人口16%，80歲以上人口達8.1%，其中三民、鳳山、苓雅等區高齡者比例明顯偏高，尤以女性為主。此現象顯示高雄已步入深度高齡社會，建議強化社區長照資源、擴增日照中心，並結合在地文化與運動促進高齡健康生活。
+                <br> <br>
               我的家鄉左營區因早年為國軍海軍重鎮，形成獨特的眷村文化與人口結構。許多眷村長者選擇在地落腳，使得區內65歲以上高齡人口比例高達兩成以上，遠高於高雄市平均。這種歷史背景造成高齡人口集中、年輕人口外移現象。儘管左營擁有完善醫療與交通條件，但眷村改建後社區凝聚力下降，長照與社會參與資源仍需強化，未來應結合眷村文化與高齡需求，打造具地方特色的高齡友善社區。</p>
         </div>
 
-        <!-- 右側 iframe -->
+        <!-- 下圖 iframe -->
         <div class="iframe-container">
             <iframe src="https://plotdb.io/v/chart/37329" width="100%" height="600px" allowfullscreen="true" frameborder="0"></iframe></iframe>
             <p class="description">圖二:高雄市80歲以上人口分布。</p>
         </div>
+          <!-- 資料來源 -->
+           <div class="source">
+                資料來源：社會經濟資料服務平台-113年12月行政區人口統計_村里
+            </div>
     </div>
 </body>
 </html>
