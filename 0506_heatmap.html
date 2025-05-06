@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高雄市鄉鎮高齡人口熱圖</title>
+    <style>
+        /* 基本文字與背景樣式 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* 標題樣式 */
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            color: #2c3e50;
+        }
+
+        /* 容器的樣式 */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            padding: 20px;
+        }
+
+        /* iframe 容器樣式 */
+        .iframe-container {
+            display: flex;
+            flex-direction: row; /* 水平排列 */
+            align-items: center;
+            flex: 1 1 100%; /* 每個區塊占滿寬度 */
+            box-sizing: border-box;
+            padding: 10px;
+        }
+
+        .iframe-container iframe {
+            width: 60%; /* 圖表占 60% 寬度 */
+            height: 300px;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* 說明文字樣式 */
+        .iframe-container .description {
+            width: 40%; /* 說明區占 40% 寬度 */
+            padding-right: 20px; /* 右側間距 */
+            font-size: 0.95em;
+            color: #555;
+        }
+
+        /* 資料來源樣式 */
+        .source {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #999; /* 純文字灰色下標 */
+        }
+
+        /* 圖卡區域樣式 */
+        .card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #fffde7; /* 淡黃色背景 */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+
+        .card img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .card-title {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            text-decoration: underline; /* 標題加入底線 */
+        }
+
+        .card-description {
+            font-size: 1em;
+            text-align: center;
+            color: #555;
+        }
+
+        /* 小螢幕樣式 */
+        @media (max-width: 768px) {
+            .iframe-container {
+                flex-direction: column; /* 小螢幕時垂直排列 */
+            }
+
+            .iframe-container iframe {
+                width: 100%;
+            }
+
+            .iframe-container .description {
+                width: 100%;
+                padding-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>高雄市鄉鎮高齡人口熱圖</h1>
+    <div class="container">
+        <!-- 上圖 iframe -->
+        <div class="iframe-container">
+            <div class="description">
+                <p>圖一: 高雄市65-79歲人口分布。</p>
+                <p>根據113年資料，高雄市65至79歲人口約佔總人口16%，其中三民、鳳山、苓雅等區高齡者比例明顯偏高，尤以女性為主。</p>
+            </div>
+            <iframe src="https://plotdb.io/v/chart/37313" allowfullscreen="true"></iframe>
+        </div>
+        <!-- 資料來源 -->
+        <div class="source">
+            資料來源：社會經濟資料服務平台 - 113年12月行政區人口統計_村里
+        </div>
+
+        <!-- 下圖 iframe -->
+        <div class="iframe-container">
+            <div class="description">
+                <p>圖二: 高雄市80歲以上人口分布。</p>
+                <p>高雄市80歲以上人口達8.1%，顯示高齡化社會進一步加深，建議強化長照資源以因應未來需求。</p>
+            </div>
+            <iframe src="https://plotdb.io/v/chart/37329" allowfullscreen="true"></iframe>
+        </div>
+        <!-- 資料來源 -->
+        <div class="source">
+            資料來源：社會經濟資料服務平台 - 113年12月行政區人口統計_村里
+        </div>
+    </div>
+
+    <!-- 圖卡區域 -->
+    <div class="card">
+        <div class="carousel">
+            <button class="prev" onclick="prevSlide()">&#9664;</button> <!-- 左箭頭 -->
+            <div class="carousel-images">
+                <img src="images/Gamma.jpg" alt=" 圖片1" class="active">
+                <img src="images/MSDesigner.jpg" alt="圖片2">
+            </div>
+            <button class="next" onclick="nextSlide()">&#9654;</button> <!-- 右箭頭 -->
+        </div>
+        <div class="card-title">「與書同行—左營樂齡共讀與步行計畫」</div>
+        <div class="card-description">
+            本行動「與書同行—左營樂齡共讀與步行計畫」聚焦於閱讀推廣與行走復健兩大方向，希望透過行動便利的長者來協助行動較為困難的同伴，促進高齡者的社交與身心健康。推廣閱讀是因隨著年齡增長，部分長者因視力衰退逐漸減少閱讀，轉而依賴短影音與影片，這可能降低思考與想像力，進而影響認知與身體機能。利用圖書館與公共資源舉辦讀書會、共讀分享會與互動活動，建立閱讀交流社群，並輔以有聲書方式應對視力不佳者和同時與其他活動搭配。行走復健則是為了行動不便的長者往往降低出門的意願，導致身體機能進一步退化。因此，我們將在閱讀活動中融入步行與復健訓練，鼓勵長者藉著參加讀書會的機會走出家門，並搭配簡單的行走訓練，促進身心健康。
+        </div>
+    </div>
+    
+    <style>
+        /* 圖卡區域樣式 */
+        .card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #fffde7; /* 淡黃色背景 */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+    
+        .carousel {
+            display: flex;
+            align-items: center;
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+        }
+    
+        .carousel-images {
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+        }
+    
+        .carousel-images img {
+            min-width: 100%;
+            transition: transform 0.5s ease-in-out;
+            display: none; /* 預設隱藏所有圖片 */
+        }
+    
+        .carousel-images img.active {
+            display: block; /* 顯示當前圖片 */
+        }
+    
+        .prev, .next {
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1.5em;
+            padding: 5px 10px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+        }
+    
+        .prev {
+            left: 10px;
+        }
+    
+        .next {
+            right: 10px;
+        }
+    
+        .card-title {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-top: 20px;
+            text-decoration: underline;
+        }
+    
+        .card-description {
+            font-size: 1em;
+            text-align: center;
+            color: #555;
+            margin-top: 10px;
+        }
+    </style>
+    
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-images img');
+    
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+        }
+    
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+    
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+    
+        // 初始顯示第一張圖片
+        showSlide(currentSlide);
+    </script>
+    </div>
+</body>
+</html>
